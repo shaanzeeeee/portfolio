@@ -247,8 +247,6 @@
                     class="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors">Projects</a>
                 <a href="#about"
                     class="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors">About</a>
-                <a href="#ai"
-                    class="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors">AI</a>
             </div>
             <a href="#contact"
                 class="bg-white text-black px-5 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-colors duration-200 magnetic-btn shadow-lg">
@@ -286,7 +284,7 @@
                 <!-- Profile Image -->
                 <div class="opacity-0 hero-fade-in">
                     <img src="shaanzeeeee.jpg" alt="Mahinuzzaman Shaan"
-                        class="w-32 h-32 md:w-60 md:h-60 rounded-full object-cover border-4 border-black shadow-2xl grayscale hover:grayscale-0 transition-all duration-500">
+                        class="w-32 h-32 md:w-60 md:h-60 rounded-full object-cover border-4 border-black shadow-2xl transition-all duration-500">
                 </div>
 
                 <!-- Name Title -->
@@ -499,130 +497,95 @@
         </div>
     </section>
 
-    <!-- AI Terminal Section -->
-    <section id="ai" class="bg-[#050505] text-gray-300 py-20 md:py-32 px-4 md:px-6 relative overflow-hidden">
+    <!-- Career Timeline Section (formerly AI section) -->
+    <section id="about" class="bg-[#050505] text-gray-300 py-20 md:py-32 px-4 md:px-6 relative overflow-hidden">
         <div
             class="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:3rem_3rem] md:bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none opacity-20">
         </div>
 
-        <div class="max-w-[1000px] mx-auto relative z-10">
-            <div class="text-center mb-10 md:mb-16">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6">
-                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="font-mono text-[10px] uppercase tracking-widest text-white">Gemini Powered</span>
-                </div>
-                <h2 class="text-3xl md:text-6xl font-semibold tracking-tighter text-white mb-4">Ask my AI Assistant</h2>
-                <p class="text-gray-400 max-w-md mx-auto font-light text-sm md:text-lg">
-                    Query my background, tech stack, or availability. It reads directly from my resume data.
+        <div class="max-w-[1200px] mx-auto relative z-10">
+            <div class="text-center mb-12 md:mb-20">
+                <h2 class="text-4xl md:text-7xl font-semibold tracking-tighter text-white mb-6 uppercase">
+                    Career Timeline
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto font-light text-base md:text-lg leading-relaxed">
+                    Passionate software developer with a strong foundation in full-stack and backend development.
+                    Experienced in web technologies, AI Systems, and NLP.
                 </p>
             </div>
 
-            <div class="w-full bg-[#0F0F0F] border border-white/10 rounded-lg shadow-2xl overflow-hidden flex flex-col">
-                <div class="bg-[#151515] px-4 py-3 flex items-center gap-4 border-b border-white/5 shrink-0">
-                    <div class="flex gap-1.5 md:gap-2">
-                        <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500/20 border border-red-500/50">
-                        </div>
-                        <div
-                            class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50">
-                        </div>
-                        <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500/20 border border-green-500/50">
-                        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+                <!-- Education Column -->
+                <div class="space-y-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 text-accent"></i>
+                        <h3 class="text-2xl md:text-3xl font-semibold tracking-tight text-white">Education</h3>
                     </div>
-                    <div class="flex-1 text-center font-mono text-[10px] md:text-xs text-gray-500">shaan-bot — node —
-                        80x24</div>
-                </div>
-                <div
-                    class="p-4 md:p-6 font-mono text-xs md:text-base h-[350px] md:h-[400px] flex flex-col bg-black/50 backdrop-blur-sm">
-                    <div id="terminal-output"
-                        class="space-y-3 md:space-y-4 mb-2 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
-                        <div class="text-green-400/90">
-                            <span class="text-accent">➜</span> ~ System online. Try asking: "What is your experience
-                            with AWS?"
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2 md:gap-3 pt-3 border-t border-white/10 shrink-0">
-                        <span class="text-accent">➜</span>
-                        <span class="text-blue-400">~</span>
-                        <input type="text" id="ai-input"
-                            class="bg-transparent border-none outline-none text-white w-full placeholder-gray-700 focus:placeholder-gray-600"
-                            placeholder="Type your question..." autocomplete="off" spellcheck="false">
-                    </div>
-                </div>
-            </div>
 
-            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-6 md:mt-8">
-                <button
-                    class="quick-prompt px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/5 rounded text-[10px] md:text-xs font-mono text-gray-400 transition-colors">"Core
-                    skills?"</button>
-                <button
-                    class="quick-prompt px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/5 rounded text-[10px] md:text-xs font-mono text-gray-400 transition-colors">"Previous
-                    roles?"</button>
-                <button
-                    class="quick-prompt px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/5 rounded text-[10px] md:text-xs font-mono text-gray-400 transition-colors">"Contact
-                    info?"</button>
-            </div>
-        </div>
-    </section>
+                    <div class="space-y-6 border-l-2 border-white/10 pl-6">
+                        <div class="relative group">
+                            <div class="absolute -left-[1.6rem] top-2 w-3 h-3 bg-accent rounded-full border-2 border-[#050505]"></div>
+                            <div class="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                                <p class="font-semibold text-white text-lg">B.Sc in Computer Science</p>
+                                <p class="text-sm text-gray-400 mt-1">BRAC University • 2021 — 2025</p>
+                                <p class="text-sm text-gray-400 mt-2">CGPA: <span class="text-accent font-semibold">3.56 out of 4.00</span> (Distinction)</p>
+                            </div>
+                        </div>
 
-    <!-- Experience & About -->
-    <section id="about" class="px-4 md:px-6 py-20 md:py-32 bg-white">
-        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-            <div class="relative">
-                <div class="md:sticky md:top-32">
-                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tighter uppercase mb-6 md:mb-8">
-                        Career<br>Timeline</h2>
-                    <div class="w-12 md:w-16 h-1 bg-accent mb-6 md:mb-8"></div>
-                    <p class="text-secondary text-base md:text-lg leading-relaxed">
-                        Passionate software developer with a strong foundation in full-stack and backend development.
-                        Experienced in web technologies, AI Systems, and NLP.
-                    </p>
-                    <div class="mt-8 md:mt-12 p-5 md:p-6 bg-background rounded-lg border border-black/5 space-y-6">
-                        <div>
-                            <h4 class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-accent mb-2">
-                                Education</h4>
-                            <p class="font-semibold text-sm md:text-base">B.Sc in Computer Science</p>
-                            <p class="text-xs md:text-sm text-secondary">BRAC University • 2021 — 2025</p>
-                            <p class="text-xs md:text-sm text-secondary mt-1">CGPA: 3.56 out of 4.00 (Distinction)</p>
+                        <div class="relative group">
+                            <div class="absolute -left-[1.6rem] top-2 w-3 h-3 bg-white/20 rounded-full border-2 border-[#050505] group-hover:bg-accent transition-colors"></div>
+                            <div class="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                                <p class="font-semibold text-white text-lg">Higher Secondary Certificate (HSC)</p>
+                                <p class="text-sm text-gray-400 mt-1">Dr. Mahbubur Rahman Mollah College • 2020</p>
+                                <p class="text-sm text-gray-400 mt-2">GPA: <span class="text-accent font-semibold">5.00 out of 5.00</span></p>
+                            </div>
                         </div>
-                        <div class="border-t border-black/5 pt-4">
-                            <p class="font-semibold text-sm md:text-base">Higher Secondary Certificate (HSC)</p>
-                            <p class="text-xs md:text-sm text-secondary">Dr. Mahbubur Rahman Mollah College • 2020</p>
-                            <p class="text-xs md:text-sm text-secondary mt-1">GPA: 5.00 out of 5.00</p>
-                        </div>
-                        <div class="border-t border-black/5 pt-4">
-                            <p class="font-semibold text-sm md:text-base">Secondary School Certificate (SSC)</p>
-                            <p class="text-xs md:text-sm text-secondary">Ideal School and College • 2018</p>
-                            <p class="text-xs md:text-sm text-secondary mt-1">GPA: 5.00 out of 5.00</p>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[1.6rem] top-2 w-3 h-3 bg-white/20 rounded-full border-2 border-[#050505] group-hover:bg-accent transition-colors"></div>
+                            <div class="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                                <p class="font-semibold text-white text-lg">Secondary School Certificate (SSC)</p>
+                                <p class="text-sm text-gray-400 mt-1">Ideal School and College • 2018</p>
+                                <p class="text-sm text-gray-400 mt-2">GPA: <span class="text-accent font-semibold">5.00 out of 5.00</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="space-y-12 md:space-y-16 border-l border-black/10 pl-6 md:pl-12 mt-4 md:mt-0">
-                <div class="relative group">
-                    <div
-                        class="absolute -left-[1.95rem] md:-left-[3.25rem] top-1.5 md:top-2 w-2.5 h-2.5 md:w-3 md:h-3 bg-white border-2 border-accent rounded-full z-10 group-hover:bg-accent transition-colors">
+                <!-- Experience Column -->
+                <div class="space-y-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="briefcase" class="w-5 h-5 text-accent"></i>
+                        <h3 class="text-2xl md:text-3xl font-semibold tracking-tight text-white">Experience</h3>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold tracking-tight">In-Game Leader</h3>
-                    <p class="font-mono text-xs md:text-sm text-accent mt-1 mb-3 uppercase tracking-wider">BroadWalk
-                        Esports / Nov 2023 — Sep 2024</p>
-                    <ul class="space-y-2 text-secondary list-disc pl-4 text-sm md:text-base marker:text-gray-300">
-                        <li>Developed and implemented tactical plans to optimize team performance.</li>
-                        <li>Analyzed gameplay metrics and opponent strategies to refine tactics.</li>
-                    </ul>
-                </div>
-                <div class="relative group">
-                    <div
-                        class="absolute -left-[1.95rem] md:-left-[3.25rem] top-1.5 md:top-2 w-2.5 h-2.5 md:w-3 md:h-3 bg-white border-2 border-gray-300 rounded-full z-10 group-hover:border-accent transition-colors">
+
+                    <div class="space-y-6 border-l-2 border-white/10 pl-6">
+                        <div class="relative group">
+                            <div class="absolute -left-[1.6rem] top-2 w-3 h-3 bg-accent rounded-full border-2 border-[#050505]"></div>
+                            <div class="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                                <h4 class="text-xl font-semibold text-white">In-Game Leader</h4>
+                                <p class="text-sm text-gray-400 mt-1">BroadWalk Esports</p>
+                                <p class="font-mono text-xs text-accent mt-2 uppercase tracking-wider">Nov 2023 — Sep 2024</p>
+                                <ul class="space-y-2 mt-4 text-gray-400 list-disc pl-4 text-sm marker:text-accent/50">
+                                    <li>Developed and implemented tactical plans to optimize team performance.</li>
+                                    <li>Analyzed gameplay metrics and opponent strategies to refine tactics.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[1.6rem] top-2 w-3 h-3 bg-white/20 rounded-full border-2 border-[#050505] group-hover:bg-accent transition-colors"></div>
+                            <div class="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                                <h4 class="text-xl font-semibold text-white">Senior Executive</h4>
+                                <p class="text-sm text-gray-400 mt-1">Brac University Chess Club</p>
+                                <p class="font-mono text-xs text-accent mt-2 uppercase tracking-wider">Aug 2022 — Dec 2023</p>
+                                <ul class="space-y-2 mt-4 text-gray-400 list-disc pl-4 text-sm marker:text-accent/50">
+                                    <li>Managed HR communications and coordinated logistics for events.</li>
+                                    <li>Contributed to strategic growth and promoted chess culture.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold tracking-tight">Senior Executive</h3>
-                    <p class="font-mono text-xs md:text-sm text-secondary mt-1 mb-3 uppercase tracking-wider">Brac
-                        University Chess Club / Aug 2022 — Dec 2023</p>
-                    <ul class="space-y-2 text-secondary list-disc pl-4 text-sm md:text-base marker:text-gray-300">
-                        <li>Managed HR communications and coordinated logistics for events.</li>
-                        <li>Contributed to strategic growth and promoted chess culture.</li>
-                    </ul>
                 </div>
             </div>
         </div>
